@@ -25,9 +25,18 @@ docker run -d -p 3000:3000 --net=host grafana/grafana:8.4.4
 
 
 
-Prometheus dashboard can be accessed from http://20.224.236.82:9090/targets
+Prometheus dashboard can be accessed from http://40.113.122.179/:9090/targets
 
-Grafana dashboard can be accessed from http://20.224.236.82:3000/
+Grafana dashboard can be accessed from http://40.113.122.179/:3000/
+
+user: admin
+password: admin 
+
+for weather API i can pretty much use 
+grafana-cli plugins install meteostat-meteostat-datasource
+and get the API key from the client and retrive the data and process it on node exporter metrics to get a historical data for the same. 
+
+Time being i'm unable to get the API key from the client to get this imlemented but this is the implementation plan. 
 
 
 
